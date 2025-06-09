@@ -1,0 +1,33 @@
+<ion-content fullscreen class="ion-padding">
+  <ion-grid class="ion-text-center h-100">
+    <ion-row class="h-100 ">
+      <ion-col class="align-content-center">
+
+        <img src="../../assets/logo.png" alt="Logo" class="class-img-logo" />
+
+        <h1>TO-DO APP</h1>
+
+        <ion-item>
+          <ion-input [(ngModel)]="email" label="Email" labelPlacement="floating"
+            placeholder="Insira o email"></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="invalidEmail">
+          <p style="font-size: 12px; color: red;" class="ion-padding-start">Email inválido.</p>
+        </ion-text>
+
+        <ion-item>
+          <ion-input [(ngModel)]="password" label="Senha" labelPlacement="floating" placeholder="Insira a senha"
+            type="password"></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="invalidPassword">
+          <p style="font-size: 12px; color: red;" class="ion-padding-start">Senha inválida.</p>
+        </ion-text>
+
+        <ion-button expand="block" class="ion-margin-top" (click)="doLogin()">
+          Entrar
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

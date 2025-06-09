@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ver tarefa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img src="{{ task.image != '' ? task.image : '../../assets/no_image.jpg' }}" alt="">
+
+    <ion-card-header>
+      <ion-card-title>{{ task?.title }}</ion-card-title>
+      <ion-card-subtitle>{{ task?.subtitle }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ task?.description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
